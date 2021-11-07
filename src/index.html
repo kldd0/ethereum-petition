@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            <h1> {{ message }} </h1>
+            <button v-on:click="connectToMetaMask">Connect to MetaMask</button>
+        </div>
+
+        <div id="signs">
+            <p> Creation of Signs </p>
+            <input name="content" id="content-id">
+            <button v-on:click="createSign">Create Sign</button>
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
