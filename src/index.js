@@ -4,7 +4,7 @@ var app = new Vue({
 		message: 'EtherApp'
 	},
 	methods: {
-		connectToMetaMask: async function main() {
+		connectToMetaMask: async function () {
 			if (typeof window.ethereum !== 'undefined') {
 				console.log('MetaMask is installed')
 			}
@@ -17,14 +17,17 @@ var app = new Vue({
 })
 
 var appTasks = new Vue({
-	el: '#signs',
+	el: '#signatures',
+	data: {
+		status: ''
+	},
 	methods: {
-		createSign: function () {
+		createSignature: function () {
 			var content = document.getElementById('content-id').value;
 			if (content !== '') {
-				console.log('Sign is created. Author is ', content);
+				this.status = 'Signature is created. Author is ' + content;
 			} else {
-				console.log('Input is blank');
+				this.status = 'Input is blank';
 			}
 		}
 	}

@@ -9,10 +9,11 @@
             <button v-on:click="connectToMetaMask">Connect to MetaMask</button>
         </div>
 
-        <div id="signs">
+        <div id="signature">
             <p> Creation of Signs </p>
             <input name="content" id="content-id">
-            <button v-on:click="createSign">Create Sign</button>
+            <button v-on:click="createSignature">Create Sign</button>
+            <p>status: {{ status }}</p>
         </div>
         
         <script src="index.js"></script>
