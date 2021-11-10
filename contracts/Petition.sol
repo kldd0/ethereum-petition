@@ -17,7 +17,7 @@ contract Petition {
 	mapping(address => bool) private signers;
 
 	function create_signature(string memory _name) public {
-		require(bytes(_name) > 0);
+		require(bytes(_name).length > 0);
 		signatures_count++;
 		signatures[signatures_count] = Signature(signatures_count, msg.sender, _name);
 		signers[msg.sender] = true;
